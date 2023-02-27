@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sohanazurelearn 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sohanazurelearn
+  template:
+    metadata:
+      labels:
+        app: sohanazurelearn 
+    spec:
+      containers:
+        - name: sohanazurelearn 
+          image: sss14cr.azurecr.io/sohanazurelearn
+          ports:
+          - containerPort: 80
