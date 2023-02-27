@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: sohanazurelearn 
-          image: sss14cr.azurecr.io/sohanazurelearn
+          image: sss14cr.azurecr.io/custom2nginxapp
           ports:
           - containerPort: 80
