@@ -17,3 +17,6 @@ spec:
           image: sss14cr.azurecr.io/custom2nginxapp
           ports:
           - containerPort: 80
+          env:
+          - name: MY_ENV_VAR
+            value: "$(spring)"
