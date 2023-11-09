@@ -21,7 +21,7 @@ spec:
         - |
           apk add --no-cache gnupg &&
           ls -la /etc/gpg-keys &&
-          gpg --import /etc/gpg-keys/dzIndia.asc
+    
       containers:
         - name: sohanazurelearn 
           image: tstss.azurecr.io/custom2nginxapp
