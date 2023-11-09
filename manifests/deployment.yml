@@ -12,9 +12,19 @@ spec:
       labels:
         app: sohanazurelearn 
     spec:
+      initContainers:
+      - name: import-gpg-key
+        image: alpine:3.18.4
+        command:
+        - sh
+        - -c
+        - |
+          apk add --no-cache gnupg &&
+          ls -la /etc/gpg-keys &&
+          gpg --import /etc/gpg-keys/dzIndia.asc
       containers:
         - name: sohanazurelearn 
-          image: sss14cr.azurecr.io/custom2nginxapp
+          image: tstss.azurecr.io/custom2nginxapp
           ports:
           - containerPort: 80
           env:
