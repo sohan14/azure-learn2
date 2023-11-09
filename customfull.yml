@@ -22,7 +22,7 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'manual-ss14cr-svc'
+        containerRegistry: 'containerreach'
         repository: 'custom2nginxapp'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
