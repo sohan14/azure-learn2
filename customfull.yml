@@ -16,9 +16,9 @@ stages:
   - job: Build
     displayName: Build job
     pool:
-      name: Default
+      name: aks
       demands:
-      - agent.name -equals devops
+      - agent.name -equals aks
     steps:
     - task: Docker@2
       inputs:
